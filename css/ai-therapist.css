@@ -1,0 +1,239 @@
+/* Base Container */
+:root {
+    --primary-color: #7C83FD;
+    --secondary-color: #96BAFF;
+    --accent-color: #7DEDFF;
+    --background-color: #F7F7FF;
+    --text-color: #2A2A2A;
+    --danger-color: #FF6B6B;
+}
+
+*{
+    font-family: 'Space Mono', monospace;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.emergency-btn {
+    background: var(--danger-color);
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+}
+
+.therapist-container {
+    padding: 2rem 8%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Space Mono', monospace;
+}
+
+.therapist-container h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: -1px;
+}
+
+.disclaimer {
+    background: white;
+    color: var(--text-color);
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    margin: 0.5rem 0 1.5rem;
+    font-size: 0.85rem;
+    border: 2px solid #7C83FD;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.disclaimer:hover {
+    transform: translateY(-2px);
+}
+
+.chat-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.425);
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 1.5rem auto;
+    border: 2px solid #272727;
+    transition: all 0.3s ease;
+}
+
+.chat-container:hover {
+    transform: translateY(-3px);
+}
+
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.message {
+    margin-bottom: 0.5rem;
+    max-width: 70%;
+    display: flex;
+    animation: messageSlide 0.3s ease-out;
+}
+
+.message-content {
+    padding: 0.8rem 1.2rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.user-message .message-content {
+    background: #7C83FD;
+    color: white;
+    border-bottom-right-radius: 5px;
+}
+
+.ai-message .message-content {
+    background: white;
+    color: var(--text-color);
+    border-bottom-left-radius: 5px;
+    border: 2px solid #7C83FD;
+}
+
+.chat-input {
+    padding: 1rem;
+    background: white;
+    border-top: 2px solid #7C83FD;
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-end;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.chat-input textarea {
+    flex-grow: 1;
+    padding: 0.8rem 1.2rem;
+    border: 2px solid #7C83FD;
+    border-radius: 15px;
+    resize: none;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    max-height: 80px;
+    transition: all 0.3s ease;
+}
+
+.chat-input textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(124, 131, 253, 0.1);
+    transform: translateY(-2px);
+}
+
+#send-message {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+#send-message:hover {
+    background: #7C83FD;
+    color: white;
+    transform: scale(1.1) rotate(90deg);
+}
+
+.suggested-topics {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.425);
+    border: 2px solid #7C83FD;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.suggested-topics:hover {
+    transform: translateY(-3px);
+}
+
+.suggested-topics h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.topic-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.topic-btn {
+    background: transparent;
+    color: var(--text-color);
+    padding: 0.6rem 1.5rem;
+    border: 2px solid #7C83FD;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.topic-btn:hover {
+    background: #7C83FD;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(124, 131, 253, 0.2);
+}
+
+.chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: #7C83FD;
+    border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+    .therapist-container {
+        padding: 1.5rem 4%;
+    }
+    
+    .topic-buttons {
+        flex-direction: column;
+    }
+    
+    .topic-btn {
+        width: 100%;
+    }
+    
+    .message {
+        max-width: 85%;
+    }
+} 

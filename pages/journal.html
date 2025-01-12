@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal - MindfulMe</title>
+    <link rel="stylesheet" href="../css/journal.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MindfulMe</div>
+        <div class="nav-links">
+            <a href="../index.html" class="active">Home</a>
+            <a href="../pages/mood-tracker.html">Mood Tracker</a>
+            <a href="journal.html">Journal</a>
+            <a href="../pages/ai-therapist.html">AI Therapist</a>
+            <a href="../pages/resources.html">Resources</a>
+            <!-- <a href="pages/community.html">Community</a> -->
+            <a href="../pages/crisis.html" class="emergency-btn">Crisis Help</a>
+        </div>
+    </nav>
+
+    <main class="journal-container">
+        <h1 style="color:#7C83FD">Personal <span style="color:black">Journal</span></h1>
+        
+        <div class="journal-tools">
+            <button id="new-entry" class="primary-btn">New Entry</button>
+            <div class="journal-filters">
+                <input type="text" placeholder="Search entries...">
+                <select>
+                    <option value="recent">Most Recent</option>
+                    <option value="oldest">Oldest First</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="journal-entry-form hidden">
+            <input type="text" id="entry-title" placeholder="Entry Title">
+            <textarea id="entry-content" placeholder="Write your thoughts..."></textarea>
+            <div class="entry-tags">
+                <input type="text" placeholder="Add tags (comma separated)">
+            </div>
+            <div class="entry-actions">
+                <button class="primary-btn" id="save-entry">Save</button>
+                <button class="secondary-btn" id="cancel-entry">Cancel</button>
+            </div>
+        </div>
+
+        <div id="journal-entries" class="entries-grid">
+        </div>
+    </main>
+    <script src="../js/journal.js"></script>
+</body>
+</html>

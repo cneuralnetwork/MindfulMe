@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - MindfulMe</title>
+    <link rel="stylesheet" href="../css/resources.css">
+    <!-- <link rel="stylesheet" href="../css/animations.css"> -->
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MindfulMe</div>
+        <div class="nav-links">
+            <a href="../index.html" class="active">Home</a>
+            <a href="../pages/mood-tracker.html">Mood Tracker</a>
+            <a href="../pages/journal.html">Journal</a>
+            <a href="../pages/ai-therapist.html">AI Therapist</a>
+            <a href="resources.html">Resources</a>
+            <a href="../pages/crisis.html" class="emergency-btn">Crisis Help</a>
+        </div>
+    </nav>
+
+    <main class="resources-container">
+        <h1 style="color:#7C83FD">Mental Health <span style="color:black">Resources</span></h1>
+
+        <div class="resources-grid">
+            <section class="resource-category">
+                <h2>Guided Meditations</h2>
+                <div class="resource-cards">
+                    <div class="resource-card">
+                        <h3>Mindfulness Meditation</h3>
+                        <p>10 minutes of guided mindfulness practice</p>
+                        <a href="https://www.youtube.com/watch?v=ZToicYcHIOU" target="_blank" class="resource-link">Start Session</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Sleep Meditation</h3>
+                        <p>Calming meditation for better sleep</p>
+                        <a href="https://www.youtube.com/watch?v=aEqlQvczMJQ" target="_blank" class="resource-link">Start Session</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resource-category">
+                <h2>Breathing Exercises</h2>
+                <div class="breathing-exercise">
+                    <div class="breathing-container">
+                        <div class="breathing-circle"></div>
+                        <span class="breathing-text">Press Start to begin</span>
+                        <div class="breath-count">Breaths: <span id="breath-counter">0</span></div>
+                    </div>
+                    <div class="breathing-controls">
+                        <button id="start-breathing" class="breathing-btn">Start</button>
+                        <button id="stop-breathing" class="breathing-btn" disabled>Stop</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resource-category">
+                <h2>Educational Articles</h2>
+                <div class="article-list">
+                    <a href="https://www.healthline.com/health/mental-health/how-to-cope-with-anxiety" class="article-item">
+                        <h3>Understanding Anxiety and Its Effects</h3>
+                        <p>Learn about the different types of anxiety and coping mechanisms</p>
+                    </a>
+                    <a href="https://www.medicalnewstoday.com/articles/self-care-examples" class="article-item">
+                        <h3>The Importance of Self-Care</h3>
+                        <p>Discover why self-care is crucial for mental health</p>
+                    </a>
+                </div>
+            </section>
+
+            <section class="resource-category">
+                <h2>Self-Care Activities</h2>
+                <div class="activity-suggestions">
+                    <div class="activity-card">
+                        <h3>5-4-3-2-1 Grounding</h3>
+                        <p>Name 5 things you can see, 4 you can touch, 3 you can hear, 2 you can smell, and 1 you can taste. This exercise helps anchor you to the present moment.</p>
+                    </div>
+                    <div class="activity-card">
+                        <h3>Joy Journal</h3>
+                        <p>Take 5 minutes to write down three positive moments from your day, no matter how small. This practice helps train your brain to notice the good.</p>
+                    </div>
+                    <div class="activity-card">
+                        <h3>Digital Sunset</h3>
+                        <p>Turn off screens 1 hour before bed. Instead, try reading, stretching, or listening to calming music to improve sleep quality and reduce anxiety.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../js/breathing.js"></script>
+</body>
+</html> 

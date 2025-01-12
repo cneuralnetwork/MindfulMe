@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker - MindfulMe</title>
+    <link rel="stylesheet" href="../css/mood-tracker.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MindfulMe</div>
+        <div class="nav-links">
+            <a href="../index.html" class="active">Home</a>
+            <a href="mood-tracker.html">Mood Tracker</a>
+            <a href="../pages/journal.html">Journal</a>
+            <a href="../pages/ai-therapist.html">AI Therapist</a>
+            <a href="../pages/resources.html">Resources</a>
+            <a href="../pages/crisis.html" class="emergency-btn">Crisis Help</a>
+        </div>
+    </nav>
+    
+    <main class="mood-tracker-container">
+        <h1 style="color:#7C83FD">Daily Mood <span style="color : black">Tracker</span></h1>
+        
+        <div class="mood-input-section">
+            <h2>How are you feeling today?</h2>
+            <div class="mood-buttons">
+                <button class="mood-btn" data-mood="great">😊 Great</button>
+                <button class="mood-btn" data-mood="good">🙂 Good</button>
+                <button class="mood-btn" data-mood="okay">😐 Okay</button>
+                <button class="mood-btn" data-mood="bad">😕 Bad</button>
+                <button class="mood-btn" data-mood="terrible">😢 Terrible</button>
+            </div>
+            
+            <div class="mood-factors">
+                <h3>What factors are affecting your mood?</h3>
+                <div class="factors-grid">
+                    <label><input type="checkbox" value="sleep"> Sleep</label>
+                    <label><input type="checkbox" value="exercise"> Exercise</label>
+                    <label><input type="checkbox" value="nutrition"> Nutrition</label>
+                    <label><input type="checkbox" value="stress"> Stress</label>
+                    <label><input type="checkbox" value="social"> Social</label>
+                </div>
+            </div>
+
+            <div class="mood-notes">
+                <textarea placeholder="Add any notes about your day..."></textarea>
+            </div>
+
+            <button id="save-mood" class="primary-btn">Save Entry</button>
+        </div>
+
+        <div class="mood-history">
+            <h2>Your Mood History</h2>
+            <canvas id="mood-chart"></canvas>
+            <div id="mood-calendar"></div>
+        </div>
+    </main>
+    <script src="../js/mood-tracker.js"></script>
+</body>
+</html>

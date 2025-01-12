@@ -1,0 +1,288 @@
+:root {
+    --primary-color: #7C83FD;
+    --secondary-color: #96BAFF;
+    --accent-color: #7DEDFF;
+    --background-color: #F7F7FF;
+    --text-color: #2A2A2A;
+    --danger-color: #FF6B6B;
+}
+
+*{
+    font-family: 'Space Mono', monospace;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.emergency-btn {
+    background: var(--danger-color);
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+}
+
+.mood-tracker-container {
+    padding: 2rem 8%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mood-tracker-container h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: -1px;
+}
+
+.mood-input-section {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.425);
+    margin-bottom: 2rem;
+    border: 2px solid #272727;
+    transition: all 0.3s ease;
+}
+
+.mood-input-section:hover {
+    transform: translateY(-3px);
+}
+
+.mood-input-section h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.mood-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.mood-btn {
+    background: transparent;
+    padding: 1rem 2rem;
+    border: 2px solid #7C83FD;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    min-width: 120px;
+    color: var(--text-color);
+}
+
+.mood-btn:hover {
+    background: #7C83FD;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(124, 131, 253, 0.2);
+}
+
+.mood-btn.active {
+    background: #7C83FD;
+    color: white;
+    box-shadow: 0 5px 15px rgba(124, 131, 253, 0.2);
+}
+
+.mood-factors {
+    margin: 2.5rem 0;
+    text-align: center;
+}
+
+.mood-factors h3 {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.factors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax( 150px, 1fr));
+    gap:1.5rem;
+    margin: 1.5rem auto;
+    max-width: 800px;
+}
+
+.factors-grid label {
+    background: transparent;
+    border: 2px solid #7C83FD;
+    padding: 0.8rem 1.2rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.factors-grid label:hover {
+    background: #7C83FD;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(124, 131, 253, 0.2);
+}
+
+.factors-grid label:hover input[type="checkbox"] {
+    background: white;
+    border-color: white;
+}
+
+.factors-grid input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #7C83FD;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    background: white;
+}
+
+.factors-grid input[type="checkbox"]:checked {
+    background: #7C83FD;
+}
+
+.factors-grid label:hover   input[type="checkbox"]:checked::after {
+    content: "✓";
+    color: #7C83FD;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+}
+
+.factors-grid input[type="checkbox"]:checked::after {
+    content: "✓";
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+}
+
+.mood-notes {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.mood-notes textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 1.2rem;
+    border: 2px solid #7C83FD;
+    border-radius: 15px;
+    resize: vertical;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-size: 1rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mood-notes textarea:focus {
+    outline: none;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(124, 131, 253, 0.2);
+}
+
+#save-mood {
+    background: transparent;
+    border: 2px solid #7C83FD;
+    color: var(--text-color);
+    padding: 1rem 3rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+#save-mood:hover {
+    background: #7C83FD;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(124, 131, 253, 0.2);
+}
+
+.mood-history {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.425);
+    border: 2px solid #272727;
+    transition: all 0.3s ease;
+}
+
+.mood-history:hover {
+    transform: translateY(-3px);
+}
+
+.mood-history h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#mood-chart {
+    background: transparent;
+    border: 2px solid #7C83FD;
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+}
+
+#mood-chart:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(124, 131, 253, 0.2);
+}
+
+#mood-calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: var(--background-color);
+    border-radius: 15px;
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

@@ -1,0 +1,197 @@
+:root {
+    --primary-color: #7C83FD;
+    --secondary-color: #96BAFF;
+    --accent-color: #7DEDFF;
+    --background-color: #F7F7FF;
+    --text-color: #2A2A2A;
+    --danger-color: #FF6B6B;
+}
+
+*{
+    font-family: 'Space Mono', monospace;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.emergency-btn1 {
+    background: var(--danger-color);
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+}
+
+.crisis-container {
+    padding: 2rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.emergency-banner {
+    background: linear-gradient(135deg, #FF6B6B, #C65353);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 30px rgba(255, 107, 107, 0.2);
+    border: 2px solid #FF6B6B;
+    transition: all 0.3s ease;
+}
+
+.emergency-banner:hover {
+    transform: translateY(-3px);
+}
+
+.emergency-numbers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.emergency-btn {
+    background: white;
+    color: #FF6B6B;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid #FF6B6B;
+    font-size: 1.1rem;
+}
+
+.emergency-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(255,107,107,0.3);
+}
+
+.crisis-sections {
+    display: grid;
+    gap: 2rem;
+}
+
+.helpline-section {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.425);
+    border: 2px solid #7C83FD;
+    transition: all 0.3s ease;
+}
+
+.helpline-section:hover {
+    transform: translateY(-3px);
+}
+
+.helpline-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.helpline-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.helpline-card:hover {
+    transform: translateY(-5px);
+}
+
+.phone-number {
+    display: block;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 1rem 0;
+}
+
+.grounding-exercises {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.exercise-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.grounding-steps {
+    padding: 1.5rem;
+    background: var(--background-color);
+    border-radius: 10px;
+}
+
+.grounding-steps ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.grounding-steps li {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.grounding-steps li:before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+.resource-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.resource-btn {
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.resource-btn:hover {
+    transform: translateY(-3px);
+}

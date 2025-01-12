@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crisis Help - MindfulMe</title>
+    <link rel="stylesheet" href="../css/crisis.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MindfulMe</div>
+        <div class="nav-links">
+            <a href="../index.html" class="active">Home</a>
+            <a href="../pages/mood-tracker.html">Mood Tracker</a>
+            <a href="../pages/journal.html">Journal</a>
+            <a href="../pages/ai-therapist.html">AI Therapist</a>
+            <a href="../pages/resources.html">Resources</a>
+            <!-- <a href="pages/community.html">Community</a> -->
+            <a href="crisis.html" class="emergency-btn1">Crisis Help</a>
+        </div>
+    </nav>
+
+    <main class="crisis-container">
+        <div class="emergency-banner pulse">
+            <h1>Need Immediate Help?</h1>
+            <p>If you're experiencing a mental health emergency, reach out immediately:</p>
+            <div class="emergency-numbers">
+                <a href="tel:112" class="emergency-btn">112 (Emergency)</a>
+                <a href="tel:108" class="emergency-btn">108 (Ambulance)</a>
+            </div>
+        </div>
+
+        <div class="crisis-sections">
+            <section class="helpline-section fade-in">
+                <h2>24/7 Mental Health Helplines</h2>
+                <div class="helpline-cards">
+                    <div class="helpline-card slide-up">
+                        <h3>AASRA</h3>
+                        <a href="tel:+919820466726" class="phone-number">+91 98204 66726</a>
+                        <p>24/7 Suicide Prevention</p>
+                        <a href="http://www.aasra.info/" target="_blank" class="website-link">Visit Website</a>
+                    </div>
+                    
+                    <div class="helpline-card slide-up">
+                        <h3>iCall</h3>
+                        <a href="tel:+919152987821" class="phone-number">+91 91529 87821</a>
+                        <p>Mon-Sat, 8 AM-10 PM</p>
+                        <a href="https://icallhelpline.org/" target="_blank" class="website-link">Visit Website</a>
+                    </div>
+
+                    <div class="helpline-card slide-up">
+                        <h3>Vandrevala Foundation</h3>
+                        <a href="tel:1860-2662-345" class="phone-number">1860-2662-345</a>
+                        <p>24/7 Mental Health Support</p>
+                    </div>
+
+                    <div class="helpline-card slide-up">
+                        <h3>NIMHANS</h3>
+                        <a href="tel:080-46110007" class="phone-number">080-46110007</a>
+                        <p>24/7 Mental Health Rehabilitation</p>
+                    </div>
+                </div>
+            </section>
+
+            
+        </div>
+    </main>
+
+    <script>
+        document.querySelector('.resource-btn:last-child').addEventListener('click', function() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition((position) => {
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+                    window.open(`https://www.google.com/maps/search/hospitals/@${latitude},${longitude},14z`, '_blank');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
