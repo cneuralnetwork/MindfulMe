@@ -1,6 +1,6 @@
 class AITherapist {
     constructor() {
-        this.API_KEY = 'AIzaSyBLih7DG7gN9Gd-0G9Ue9a7z8eGtRqJWs0'; //I know this API Key is public, but will close it after hackathon :)
+        this.API_KEY = 'AIzaSyBLih7DG7gN9Gd-0G9Ue9a7z8eGtRqJWs0'; //I know this API Key is public, but will close it after hackathon :) || This API Key is closed now, chat app doesn't work anymore
         this.API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
         this.chatHistory = [];
         this.initializeEventListeners();
